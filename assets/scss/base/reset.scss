@@ -1,0 +1,72 @@
+@use './../utils/variables' as v;
+
+html{
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body{
+  color: var(--color-primario);
+  font-family: 'Monserrat', sans-serif;
+  font-size: 100%;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
+}
+
+img, picture, video, iframe, figure{
+  display: block;
+  max-width: 100%;
+  width: 100%;
+}
+
+a{
+  display: block;
+}
+p a{
+  display: inline;
+}
+
+li{
+  list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em{
+  color: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+// evitamos problemas con los pseudoelementos de quotes
+blockquote::before, blockquote::after, q::before, q::after {
+  content: '';
+  content: none;
+}
+
+// configuramos el texto que seleccionamos
+::selection{
+  background-color: var(--color-primario  );
+  color: var(--color-secundario);
+}
+
+form, input, textarea, select, button, label{
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  font-family: inherit;
+  font-size: inherit;
+  // opcional -> appearance: none;
+}
+
+table, tr, td{
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+svg{
+  display: block;
+  fill: currentColor;
+  width: 100%;
+}

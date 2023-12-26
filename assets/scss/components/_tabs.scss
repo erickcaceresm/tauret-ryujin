@@ -1,0 +1,149 @@
+.nav-link:hover{
+  color: var(--color-red);
+}
+.nav-pills .nav-link.active{
+  background: linear-gradient(to right, rgb(247, 164, 167), rgb(195, 17, 35));
+}
+.nav-pills-k{
+  gap: 6.25rem;
+  justify-content: center;
+}
+.flex-tabs{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 3.25rem;
+  margin-top: 5.6rem;
+  position: relative;
+}
+
+.flex-tabs_figure{
+  flex: 1 0 auto;
+  position: relative;
+  max-width: 467px;
+  width: 100%;
+
+  &::before{
+    content: '';
+    background: linear-gradient(to bottom, rgb(247, 164, 167, 0) 60%, rgb(194, 11, 31) 100%);
+    border-radius: 48px;
+    // max-width: 467px;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+}
+.flex-tabs_figure-mid{
+  max-width: 508px;
+}
+
+.flex-tabs_figcaption{
+  bottom: 2rem;
+  left: 0;
+  font-weight: 800;
+  font-size: 2.5rem;
+  font-family: 'Monserrat-ExtraBold';
+  line-height: 42px;
+  height: 86px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 1;
+}
+.flex-tabs_figcaption-mid{
+  bottom: 3.8rem;
+}
+
+.option-pos{
+  color: var(--color-white);
+  position: absolute;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: max-content;
+
+  &:hover{
+    visibility: hidden;
+  }
+  &::before{
+    content: 'Intel I7';
+    left: 0;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    visibility: hidden;
+    // width: 100%;
+    width: max-content;
+  }
+  &:hover::before{
+    visibility: visible;
+  }
+}
+
+.option-pos_procesador{
+  left: 12vw;
+  top: -40px;
+
+  &::before{
+    content: 'Intel Core I5 12400';
+  }
+}
+.option-pos_board{
+  left: -3vw;
+  top: 180px;
+
+  &::before{
+    content: 'b660n ds3h';
+  }
+}
+.option-pos_video{
+  left: -6vw;
+  top: 360px;
+
+  &::before{
+    content: '1660 6gb gddr5';
+  }
+}
+.option-pos_fuente{
+  left: 17vw;
+  top: 784px;
+
+  &::before{
+    content: '650w bronze';
+  }
+}
+.option-pos_solida{
+  right: 8vw;
+  top: 784px;
+
+  &::before{
+    content: '2.5 960gb';
+  }
+}
+.option-pos_gabinete{
+  right: -3vw;
+  top: 530px;
+
+  &::before{
+    content: 'td300 mesh';
+  }
+}
+.option-pos_memoria{
+  right: -3vw;
+  top: 130px;
+
+  &::before{
+    content: '16gb (2x8gb)';
+  }
+}
+.option-pos_memoria-alt{
+  right: -3vw;
+  top: 130px;
+
+  &::before{
+    content: '32gb (4x8gb)';
+  }
+}

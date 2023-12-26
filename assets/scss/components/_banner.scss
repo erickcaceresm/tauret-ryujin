@@ -1,0 +1,148 @@
+.banner-main{
+  background-color: var(--color-black);
+  padding: 7.5rem 3rem;
+}
+
+.banner-box{
+  align-items: end;
+  display: flex;
+  gap: 48px;
+  height: 20vw;
+}
+
+.banner-logo_movil{
+  display: none;
+}
+
+.banner-video, .banner-bg{
+  align-items: center;
+  display: flex;
+  padding: 0 3rem;
+  position: relative;
+}
+.banner-bg{
+  background-color: var(--color-black);
+  height: 1080px;
+}
+.banner-video{
+  aspect-ratio: 16/9;
+}
+.bg-video_movil{
+  display: none;
+}
+
+.bg-video{
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+#playbutton{
+  cursor: pointer;
+  left: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.banner-bg{
+  padding-left: 7rem;
+}
+
+.banner-bg_one{
+  background: linear-gradient(to right, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 60%), url(./../images/bg-ryujin.png);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+.banner-bg_two{
+  background: linear-gradient(to right, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 60%), url(./../images/bg-ryujin2.png);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+.banner-bg_three{
+  background: url(./../images/bg-ryujin3.png);
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+}
+
+.bg-gamer{
+  background: url(./../images/bg-gamer.png) no-repeat;
+  background-size: contain;
+  background-position: center top;
+  padding: 1rem 0;
+}
+
+.bg-option{
+  background: center / cover url(./../images/bg-option.png) no-repeat;
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.bg-ryujin-blanco, .bg-ryujin-negro{
+  position: relative;
+  z-index: 0;
+}
+
+.bg-views{
+  background: center / cover url(./../images/bg-views.png) no-repeat;
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  &::before{
+    content: '';
+    background: linear-gradient(to right, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0));
+    left: 0;
+    height: 100%;
+    width: 40%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+
+  &::after{
+    content: '';
+    background: linear-gradient(to left, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0));
+    right: 0;
+    height: 100%;
+    width: 40%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+}
+
+.views-scroll{
+  align-items: center;
+  display: flex;
+  gap: 50px;
+  overflow-x: scroll;
+  position: relative;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0px 1.25rem;
+}
+.views-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.banner-box_alt{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+}
+
+.nav-pills .nav-link{
+  max-width: initial;
+}
+

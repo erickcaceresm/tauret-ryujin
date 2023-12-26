@@ -1,0 +1,907 @@
+@font-face {
+  font-family: "Monserrat";
+  src: url("../fonts/Montserrat-Regular.ttf") format("ttf"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Monserrat-Medium";
+  src: url("../fonts/Montserrat-Medium.ttf") format("ttf"), url("../fonts/Montserrat-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Monserrat-Bold";
+  src: url("../fonts/Montserrat-Bold.ttf") format("ttf"), url("../fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Monserrat-ExtraBold";
+  src: url("../fonts/Montserrat-ExtraBold.ttf") format("ttf"), url("../fonts/Montserrat-ExtraBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Digital-Desolation-Plus";
+  src: url("../fonts/Digital-Desolation-Plus.otf") format("otf"), url("../fonts/Digital-Desolation-Plus.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Dinpro-Medium";
+  src: url("../fonts/Dinpro-Medium.ttf") format("ttf"), url("../fonts/Dinpro-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Dinpro-Bold";
+  src: url("../fonts/Dinpro-Bold.ttf") format("ttf"), url("../fonts/Dinpro-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Dinpro-Black";
+  src: url("../fonts/Dinpro-Black.otf") format("otf"), url("../fonts/Dinpro-Black.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  --color-green: #8EC5AB;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-red: #F7A4A7;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--color-primario);
+  font-family: "Monserrat", sans-serif;
+  font-size: 100%;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
+}
+
+img, picture, video, iframe, figure {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+}
+
+a {
+  display: block;
+}
+
+p a {
+  display: inline;
+}
+
+li {
+  list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  color: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+blockquote::before, blockquote::after, q::before, q::after {
+  content: "";
+  content: none;
+}
+
+::selection {
+  background-color: var(--color-primario);
+  color: var(--color-secundario);
+}
+
+form, input, textarea, select, button, label {
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+svg {
+  display: block;
+  fill: currentColor;
+  width: 100%;
+}
+
+.text-main {
+  color: var(--color-white);
+  font-size: 1.875rem;
+  max-width: 894px;
+  margin-top: 2.5rem;
+  width: 100%;
+}
+.text-main span {
+  color: var(--color-red);
+}
+
+.title-digital {
+  color: var(--color-red);
+  font-family: "Digital-Desolation-Plus", sans-serif;
+  font-size: 2.5rem;
+}
+.title-digital strong {
+  font-size: 3.75rem;
+}
+
+.title-digital_alt {
+  margin-top: 10rem;
+}
+
+.section-base {
+  background-color: var(--color-black);
+  padding: 7.5rem 3rem;
+  position: relative;
+}
+
+.section-base_alt {
+  padding-bottom: 11.5rem;
+}
+
+.figure-ryujin_lateral {
+  max-width: 745px;
+  margin: auto;
+  margin-right: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.ryujin_lateral-col {
+  max-width: 768px;
+}
+
+.ryujin_lateral-bg {
+  position: relative;
+}
+
+.bg-text-ryujin {
+  background: center/contain url(./../images/text-ryujin.png) no-repeat;
+  left: 5%;
+  top: 5%;
+  bottom: 0;
+  position: absolute;
+  max-width: 499px;
+  width: 100%;
+}
+
+.bg-adornment-ryujin {
+  background: center/contain url(./../images/adorno-ryujin.png) no-repeat;
+  bottom: 8%;
+  height: 318px;
+  max-width: 330px;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+
+:focus-visible {
+  display: none;
+}
+
+.btn-base {
+  border-radius: 30px !important;
+  color: var(--color-white);
+  font-size: 2.1vw;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.btn-outline {
+  border: solid 2px var(--color-red) !important;
+}
+.btn-outline:hover {
+  background: linear-gradient(to right, rgb(247, 164, 167), rgb(195, 17, 35));
+  color: var(--color-white);
+}
+
+.btn-one {
+  max-width: 353px;
+  width: 100%;
+  padding: 22px 30px;
+}
+
+.btn-whatssapp {
+  background-color: rgb(77, 194, 71);
+  box-shadow: 0 0 12px 3px #286225;
+  height: 50px;
+  bottom: 40px;
+  border-radius: 50%;
+  padding: 4px;
+  position: fixed;
+  right: 40px;
+  transition: all 0.5s;
+  width: 50px;
+  z-index: 3;
+}
+.btn-whatssapp:hover {
+  background-color: rgb(92, 229, 84);
+}
+
+.navbar-k {
+  background-color: var(--color-green);
+  height: 93px;
+}
+
+.nav-pills .nav-link {
+  position: relative;
+}
+
+.figure-logo {
+  margin: auto;
+  width: 290px;
+}
+
+.banner-main {
+  background-color: var(--color-black);
+  padding: 7.5rem 3rem;
+}
+
+.banner-box {
+  align-items: end;
+  display: flex;
+  gap: 48px;
+  height: 20vw;
+}
+
+.banner-logo_movil {
+  display: none;
+}
+
+.banner-video, .banner-bg {
+  align-items: center;
+  display: flex;
+  padding: 0 3rem;
+  position: relative;
+}
+
+.banner-bg {
+  background-color: var(--color-black);
+  height: 1080px;
+}
+
+.banner-video {
+  aspect-ratio: 16/9;
+}
+
+.bg-video_movil {
+  display: none;
+}
+
+.bg-video {
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+#playbutton {
+  cursor: pointer;
+  left: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.banner-bg {
+  padding-left: 7rem;
+}
+
+.banner-bg_one {
+  background: linear-gradient(to right, rgb(0, 0, 0) 40%, rgba(0, 0, 0, 0) 60%), url(./../images/bg-ryujin.png);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.banner-bg_two {
+  background: linear-gradient(to right, rgb(0, 0, 0) 40%, rgba(0, 0, 0, 0) 60%), url(./../images/bg-ryujin2.png);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.banner-bg_three {
+  background: url(./../images/bg-ryujin3.png);
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+}
+
+.bg-gamer {
+  background: url(./../images/bg-gamer.png) no-repeat;
+  background-size: contain;
+  background-position: center top;
+  padding: 1rem 0;
+}
+
+.bg-option {
+  background: center/cover url(./../images/bg-option.png) no-repeat;
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.bg-ryujin-blanco, .bg-ryujin-negro {
+  position: relative;
+  z-index: 0;
+}
+
+.bg-views {
+  background: center/cover url(./../images/bg-views.png) no-repeat;
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.bg-views::before {
+  content: "";
+  background: linear-gradient(to right, rgb(0, 0, 0) 30%, rgba(0, 0, 0, 0));
+  left: 0;
+  height: 100%;
+  width: 40%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.bg-views::after {
+  content: "";
+  background: linear-gradient(to left, rgb(0, 0, 0) 30%, rgba(0, 0, 0, 0));
+  right: 0;
+  height: 100%;
+  width: 40%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.views-scroll {
+  align-items: center;
+  display: flex;
+  gap: 50px;
+  overflow-x: scroll;
+  position: relative;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0px 1.25rem;
+}
+
+.views-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.banner-box_alt {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+}
+
+.nav-pills .nav-link {
+  max-width: initial;
+}
+
+.carousel-control-next, .carousel-control-prev {
+  height: fit-content;
+  top: 50%;
+  width: 4%;
+}
+
+.nav-link:hover {
+  color: var(--color-red);
+}
+
+.nav-pills .nav-link.active {
+  background: linear-gradient(to right, rgb(247, 164, 167), rgb(195, 17, 35));
+}
+
+.nav-pills-k {
+  gap: 6.25rem;
+  justify-content: center;
+}
+
+.flex-tabs {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 3.25rem;
+  margin-top: 5.6rem;
+  position: relative;
+}
+
+.flex-tabs_figure {
+  flex: 1 0 auto;
+  position: relative;
+  max-width: 467px;
+  width: 100%;
+}
+.flex-tabs_figure::before {
+  content: "";
+  background: linear-gradient(to bottom, rgba(247, 164, 167, 0) 60%, rgb(194, 11, 31) 100%);
+  border-radius: 48px;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.flex-tabs_figure-mid {
+  max-width: 508px;
+}
+
+.flex-tabs_figcaption {
+  bottom: 2rem;
+  left: 0;
+  font-weight: 800;
+  font-size: 2.5rem;
+  font-family: "Monserrat-ExtraBold";
+  line-height: 42px;
+  height: 86px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.flex-tabs_figcaption-mid {
+  bottom: 3.8rem;
+}
+
+.option-pos {
+  color: var(--color-white);
+  position: absolute;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: max-content;
+}
+.option-pos:hover {
+  visibility: hidden;
+}
+.option-pos::before {
+  content: "Intel I7";
+  left: 0;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  visibility: hidden;
+  width: max-content;
+}
+.option-pos:hover::before {
+  visibility: visible;
+}
+
+.option-pos_procesador {
+  left: 12vw;
+  top: -40px;
+}
+.option-pos_procesador::before {
+  content: "Intel Core I5 12400";
+}
+
+.option-pos_board {
+  left: -3vw;
+  top: 180px;
+}
+.option-pos_board::before {
+  content: "b660n ds3h";
+}
+
+.option-pos_video {
+  left: -6vw;
+  top: 360px;
+}
+.option-pos_video::before {
+  content: "1660 6gb gddr5";
+}
+
+.option-pos_fuente {
+  left: 17vw;
+  top: 784px;
+}
+.option-pos_fuente::before {
+  content: "650w bronze";
+}
+
+.option-pos_solida {
+  right: 8vw;
+  top: 784px;
+}
+.option-pos_solida::before {
+  content: "2.5 960gb";
+}
+
+.option-pos_gabinete {
+  right: -3vw;
+  top: 530px;
+}
+.option-pos_gabinete::before {
+  content: "td300 mesh";
+}
+
+.option-pos_memoria {
+  right: -3vw;
+  top: 130px;
+}
+.option-pos_memoria::before {
+  content: "16gb (2x8gb)";
+}
+
+.option-pos_memoria-alt {
+  right: -3vw;
+  top: 130px;
+}
+.option-pos_memoria-alt::before {
+  content: "32gb (4x8gb)";
+}
+
+.footer {
+  background-color: #163629;
+  padding: 24px 32px;
+}
+
+.footer-row {
+  margin-bottom: 1.5rem;
+}
+
+.footer-title {
+  color: var(--color-white);
+  font-size: 2.8rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.footer-subtitle {
+  color: var(--color-white);
+  font-size: 1.375rem;
+}
+
+.footer-text {
+  color: var(--color-white);
+  font-size: 1.18rem;
+  margin: 0;
+  padding: 0 3rem;
+  text-align: center;
+}
+
+.form-control_input {
+  border-radius: 33px 0 0 33px;
+  height: 66px;
+  left: 2rem;
+  padding: 0 40px 0 26px;
+  z-index: 0;
+}
+.form-control_input:focus {
+  border-color: initial;
+  box-shadow: initial;
+}
+
+.form-control_button {
+  background-color: #467E66;
+  border-radius: 33px !important;
+  border: 1px solid #467E66;
+  color: var(--color-white);
+  cursor: pointer;
+  justify-content: center;
+  font-size: 1.5rem;
+  width: 152px;
+  z-index: 3;
+}
+.form-control_button:hover {
+  background-color: #539478;
+}
+
+@media screen and (min-width: 1600px) {
+  .views-scroll {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 800px) {
+  html, body {
+    overflow-x: hidden;
+    overflow-y: visible;
+  }
+
+  .section-base {
+    padding: 3rem 1rem;
+  }
+
+  .navbar-k {
+    height: 70px;
+  }
+
+  .figure-logo {
+    width: 216px;
+  }
+
+  .banner-main {
+    padding: 3rem 1rem;
+  }
+
+  .text-main {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .banner-box {
+    gap: 12px;
+  }
+
+  .banner-logo_movil {
+    display: block;
+  }
+
+  .banner-logo_desktop {
+    display: none;
+  }
+
+  .banner-box_alt {
+    gap: 20px;
+  }
+
+  .btn-base {
+    font-size: 20px;
+  }
+
+  .title-digital {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .title-digital strong {
+    font-size: 2rem;
+  }
+
+  .banner-video {
+    align-items: flex-start;
+    aspect-ratio: auto;
+    height: 660px;
+    padding: 2rem;
+  }
+  .banner-video .text-main {
+    font-size: 1rem;
+  }
+
+  .bg-video_desktop {
+    display: none;
+  }
+
+  .bg-video_movil {
+    display: block;
+  }
+
+  .banner-bg {
+    align-items: flex-start;
+    padding: 4rem 0;
+    height: 800px;
+  }
+
+  .banner-bg_one {
+    background: linear-gradient(to bottom, rgb(0, 0, 0) 54%, rgba(0, 0, 0, 0) 60%), url(./../images/bg-ryujin_movil.png);
+    background-size: 100%;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+  }
+
+  .banner-bg_two {
+    background: linear-gradient(to bottom, rgb(0, 0, 0) 54%, rgba(0, 0, 0, 0) 60%), url(./../images/bg-ryujin2_movil.png);
+    background-size: 100%;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+  }
+
+  .banner-bg_three {
+    background: linear-gradient(to bottom, rgb(0, 0, 0) 54%, rgba(0, 0, 0, 0) 60%), url(./../images/bg-ryujin3_movil.png);
+    background-size: 100%;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+  }
+
+  .bg-text-ryujin {
+    background-position: -8% 90%;
+    background-size: 60%;
+    width: initial;
+  }
+
+  .bg-adornment-ryujin {
+    bottom: 2%;
+    height: 120px;
+    max-width: 120px;
+    z-index: 1;
+  }
+
+  .title-digital_alt {
+    margin-top: 0;
+  }
+
+  .ryujin_lateral-bg {
+    padding: 3rem 1rem;
+  }
+
+  .nav-pills-k {
+    gap: 12px;
+  }
+  .nav-pills-k li {
+    flex: 1;
+  }
+
+  .views-scroll {
+    gap: 10px;
+  }
+
+  .flex-tabs_figure {
+    max-width: 260px;
+  }
+
+  .flex-tabs_figcaption {
+    bottom: 1rem;
+    height: 56px;
+    font-size: 1.5rem;
+    line-height: 28px;
+  }
+
+  .carousel-control-prev {
+    left: 1rem;
+  }
+
+  .carousel-control-next {
+    right: 1rem;
+  }
+
+  .carousel-control-next, .carousel-control-prev {
+    width: 8%;
+  }
+
+  .bg-ryujin-blanco, .bg-ryujin-negro {
+    padding: 1rem;
+  }
+
+  .option-pos {
+    font-size: 12px;
+    visibility: hidden;
+  }
+  .option-pos:hover {
+    visibility: hidden;
+  }
+  .option-pos::before {
+    content: "Intel I7";
+    left: 0;
+    visibility: hidden;
+    visibility: visible;
+  }
+
+  .option-pos_procesador {
+    right: 55vw;
+    top: -10px;
+  }
+  .option-pos_procesador::before {
+    content: "Intel Core I5 12400";
+  }
+
+  .option-pos_board {
+    left: -2vw;
+    top: 52px;
+  }
+  .option-pos_board::before {
+    content: "b660n ds3h";
+  }
+
+  .option-pos_video {
+    left: -2vw;
+    top: 96px;
+  }
+  .option-pos_video::before {
+    content: "1660 6gb gddr5";
+  }
+
+  .option-pos_fuente {
+    left: 22vw;
+    top: 220px;
+  }
+  .option-pos_fuente::before {
+    content: "650w bronze";
+  }
+
+  .option-pos_solida {
+    right: 2vw;
+    top: 220px;
+  }
+  .option-pos_solida::before {
+    content: "2.5 960gb";
+  }
+
+  .option-pos_gabinete {
+    right: -6vw;
+    top: 122px;
+  }
+  .option-pos_gabinete::before {
+    content: "td300 mesh";
+    width: 52px;
+  }
+
+  .option-pos_memoria {
+    right: -12vw;
+    top: 22px;
+  }
+  .option-pos_memoria::before {
+    content: "16gb (2x8gb)";
+    width: 52px;
+  }
+
+  .option-pos_memoria-alt {
+    right: -12vw;
+    top: 22px;
+  }
+  .option-pos_memoria-alt::before {
+    content: "32gb (4x8gb)";
+    width: 52px;
+  }
+
+  .bg-views::before {
+    background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+  }
+
+  .bg-views::after {
+    background: linear-gradient(to left, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+  }
+
+  .footer {
+    padding: 24px 1rem;
+  }
+
+  .footer-text {
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  .footer-title {
+    font-size: 2rem;
+  }
+
+  .footer-subtitle {
+    font-size: 1rem;
+  }
+
+  .input-group-k {
+    left: -1rem;
+  }
+
+  .form-control_button {
+    max-width: 130px;
+  }
+
+  .btn-whatssapp {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .btn-base {
+    font-size: 1rem;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
