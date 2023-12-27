@@ -1,12 +1,15 @@
 .navbar-k{
   background-color: var(--color-green);
   height: 93px;
+
+  a{
+    margin: auto;
+  }
 }
 
 .nav-pills .nav-link{
   position: relative;
 }
 .figure-logo{
-  margin: auto;
   width: 290px;
 }

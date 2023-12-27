@@ -184,11 +184,11 @@ svg {
 
 .bg-adornment-ryujin {
   background: center/contain url(./../images/adorno-ryujin.png) no-repeat;
-  bottom: 8%;
   height: 318px;
   max-width: 330px;
   position: absolute;
   right: 0;
+  top: 76vh;
   width: 100%;
 }
 
@@ -240,13 +240,15 @@ svg {
   background-color: var(--color-green);
   height: 93px;
 }
+.navbar-k a {
+  margin: auto;
+}
 
 .nav-pills .nav-link {
   position: relative;
 }
 
 .figure-logo {
-  margin: auto;
   width: 290px;
 }
 
@@ -586,6 +588,11 @@ svg {
   margin: 0;
   padding: 0 3rem;
   text-align: center;
+  margin-bottom: 2px;
+}
+.footer-text strong {
+  color: var(--color-green);
+  font-family: "Monserrat-medium";
 }
 
 .form-control_input {
@@ -678,7 +685,7 @@ svg {
   .banner-video {
     align-items: flex-start;
     aspect-ratio: auto;
-    height: 660px;
+    height: 100vh;
     padding: 2rem;
   }
   .banner-video .text-main {
@@ -691,6 +698,8 @@ svg {
 
   .bg-video_movil {
     display: block;
+    height: 100%;
+    object-fit: cover;
   }
 
   .banner-bg {
@@ -730,6 +739,7 @@ svg {
     bottom: 2%;
     height: 120px;
     max-width: 120px;
+    top: initial;
     z-index: 1;
   }
 

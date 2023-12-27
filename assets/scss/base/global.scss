@@ -12,7 +12,6 @@
 .title-digital{
   color: var(--color-red);
   font-family: 'Digital-Desolation-Plus', sans-serif;
-  // text-transform: uppercase;
   font-size: 2.5rem;
 
   strong{
@@ -52,18 +51,17 @@
   top: 5%;
   bottom: 0;
   position: absolute;
-  // height: 990px;s
   max-width: 499px;
   width: 100%;
 }
 
 .bg-adornment-ryujin{
   background: center/contain url(./../images/adorno-ryujin.png) no-repeat;
-  bottom: 8%;
   height: 318px;
   max-width: 330px;
   position: absolute;
   right: 0;
+  top: 76vh;
   width: 100%;
 }
 
